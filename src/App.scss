@@ -1,0 +1,56 @@
+// variables
+$main-color: rgb(228, 111, 111);
+$transition: 0.3s ease all;
+$tborder: 1px solid red;
+
+// mixins
+
+@mixin allCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: $main-color;
+}
+.main-container {
+  height: 100vh;
+  @include allCenter;
+  flex-direction: column;
+}
+
+.nested {
+  width: 80vw;
+  height: 80vh;
+  border: $tborder;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  a {
+    text-decoration: none;
+    color: rgb(13, 13, 14);
+    transition: $transition;
+    &:hover {
+      color: red;
+    }
+  }
+
+  button {
+    padding: 0rem 2rem;
+    margin: 0.1rem 0.5rem;
+    transition: $transition;
+    &:hover {
+      background: #000;
+      color: white;
+    }
+  }
+}
+.people_container {
+  @include allCenter;
+  width: 80vw;
+  border: $tborder;
+  margin: 0.7rem 0rem;
+  flex-direction: column;
+}
